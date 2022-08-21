@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 #maindiv{
     display: flex;
@@ -9,26 +10,66 @@ body{
 }
 #logodiv{
     position: relative;
-    width: 100vw;
-    height: 10vh;
-background-color: black;
-}
-#logodiv #img{
-    width : 100%;
+    width: 100%;
     height: 100%;
+background-color: white;
+}
+
+#logodiv ul{
+    height: 100%;
+}
+
+#logodiv li{
+    text-align: center;
+    align-items:center;
+}
+
+#logodiv #img{
+    float: left;
+    display: block;
+    margin: 0% 1%;
+    padding: 4px;
+    max-height: 100%;
+    height: 100%;
+}
+#logodiv #img img{
+
+    margin-top: 4%;
+    padding: 4px;
 }
 #logodiv ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
+    width: 100%;
 }
-#logodiv li{
-    float: left;
+
+.nav-items{
+    box-sizing: border-box;
+    display: none;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+text-align: center;
+letter-spacing: 0.2px;
+color: #252B42;
+
 }
+
+#logodiv #icon{
+    position: absolute;
+    top: 40%;
+    right:4%
+}
+
 #introdiv{
+ 
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     background: #FAFAFA;
 }
@@ -39,6 +80,7 @@ background-color: black;
     color: #737373;
     letter-spacing: 0.1px;
     text-align: center;
+    padding: 10px 10px;
 }
 
 #introdiv #p2{
@@ -50,6 +92,7 @@ line-height: 42px;
 text-align: center;
 letter-spacing: 0.2px;
 color: #252B42;
+padding: 0px 15px;
 }
 #introdiv #p3{
     font-family: 'Montserrat';
@@ -60,12 +103,13 @@ line-height: 38px;
 text-align: center;
 letter-spacing: 0.2px;
 color: #737373;
+padding:0px 15px;
 }
 
 #introdiv #playStoreBtn{
-   border: none;
-    background: #FA4A0C;
-    padding: 8px 16px;
+border: none;
+background: #FA4A0C;
+padding: 16px 60px;
 box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.07);
 border-radius: 30px;
 font-family: 'Montserrat';
@@ -78,8 +122,7 @@ color: #FFFFFF;
 #introdiv #appStoreBtn{
     border: 1px solid #FA4A0C;
 border-radius: 30px;
-    
-     padding: 8px 16px;
+padding: 16px 60px;
  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.07);
  border-radius: 30px;
  font-family: 'Montserrat';
@@ -102,9 +145,10 @@ line-height: 36px;
 text-align: center;
 letter-spacing: 0.1px;
 color: #000000;
+padding: 15px;
 }
 
-#createAccDiv{
+#createAccDiv, #exploreDiv,#checkoutDiv{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -113,46 +157,44 @@ color: #000000;
 
 }
 
-#createAccDiv #p1{
+#createAccDiv #p1,#exploreDiv #p1,#checkoutDiv #p1{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 36px;
     letter-spacing: 0.1px;
     color: #FA4A0C;
+    padding: 15px;
 }
 
-#createAccDiv #p2{
+#createAccDiv #p2,#exploreDiv #p2,#checkoutDiv #p2{
     font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 40px;
-line-height: 57px;
 letter-spacing: 0.2px;
 color: #252B42;
+padding: 15px;
 }
 
-#createAccDiv #p3{
+#createAccDiv #p3, #exploreDiv #p3,#checkoutDiv #p3{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
     letter-spacing: 0.2px;
     color: #737373;
+    padding: 15px;
 }
-#createAccDiv img{
+#createAccDiv img, #exploreDiv img,#checkoutDiv img{
     align-items: center;
     max-width: 100vw;
     filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.15));
-    
 }
+
 #downloadDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #252B42;
+    background-color: #252B42;
 }
 #downloadDiv h2{
     font-family: 'Montserrat';
@@ -163,6 +205,7 @@ line-height: 57px;
 text-align: center;
 letter-spacing: 0.2px;
 color: #FFFFFF;
+
 }
 #downloadDiv h4{
     font-family: 'Montserrat';
@@ -173,16 +216,17 @@ line-height: 38px;
 text-align: center;
 letter-spacing: 0.2px;
 color: #BDBDBD;
+padding: 10px;
 }
 #downloadDiv #buyNowBtn{
-    align-items: center;
     background: #FA4A0C;
     border: none;
     border-radius: 10px;
+    padding: 18px 31px;
     font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
-font-size: 16px;
+font-size: 20px;
 line-height: 28px;
 letter-spacing: 0.2px;
 color: #FFFFFF;
@@ -193,9 +237,10 @@ color: #FFFFFF;
     background: none;
 font-style: normal;
 font-weight: 700;
-font-size: 16px;
+font-size: 20px;
 line-height: 28px;
 letter-spacing: 0.2px;
+padding: 16px 31px;
 color: #FFFFFF;
 border: 1px solid #FFFFFF;
 border-radius: 10px;
@@ -216,3 +261,121 @@ text-align: center;
 letter-spacing: 0.1px;
 color: #5C5C5C;
 }
+
+
+
+@media only screen and (min-width: 768px){
+
+#logodiv #icon{
+    display: none;
+}
+
+.nav-items{
+    display: block;
+  max-height: 100%;
+    float: right;
+    margin: 2% 2% 2% 2%;
+    max-height: 100%;
+}
+
+.nav-items a{
+    display: inline-block;
+    color: black;
+   text-decoration: none;
+}
+
+#introdiv{
+    background-image: url('/images/Rectangle\ 48.png');
+    background-repeat: no-repeat;
+}
+#introdiv #p1{
+    margin-top: 7%;
+    font-size: large;
+}
+#introdiv #p1, #introdiv #p3{
+    color:  #F6F6F6;
+    
+}
+#introdiv #p2{
+    color:#FFFFFF;
+}
+#introdiv button{
+    display: inline;
+}
+#breakbtns{
+    display: none;
+}
+#playstorebtns{
+    margin-top: 3%;
+}
+#createAccDiv,#exploreDiv,#checkoutDiv {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 100vw;
+}
+#createAccDiv #content,#checkoutDiv #content{
+float: right;
+position: absolute;
+top: 25%;
+left: 50%;
+width: 45%;
+font-size: 125%;
+align-items: center;
+
+}
+#createAccDiv img,#exploreDiv img , #checkoutDiv img{
+    float: left;
+    width: 25%;
+   margin-left:15% ; 
+}
+
+#exploreDiv #content{
+    position: absolute;
+    top: 25%;
+    float: left;
+    right: 50%;
+    width: 45%;
+    font-size: 125%;
+align-items: center;
+}
+
+#exploreDiv img {
+float: right;
+margin-right:15% ;
+}
+#downloadDiv{
+    background-image: url('/images/Rectangle\ 47.png');
+}
+
+#downloadDiv h4{
+    color: white;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+}
+footer #logoDiv {
+    width: 33%;
+}
+footer #logoDiv img{
+    margin-left: 45%;
+}
+footer #social {
+    width: 33.33%;
+}
+footer #p{
+    width: 33.33%;
+}
+footer #social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+footer #p {
+    width: 33%;
+}
+}
+
+
