@@ -11,17 +11,15 @@ body{
 #logodiv{
     position: relative;
     width: 100%;
-    height: 100%;
-background-color: white;
+    height: 80px;
+background: white;
 }
 
-#logodiv ul{
-    height: 100%;
-}
 
-#logodiv li{
+ #logodiv li{
     text-align: center;
     align-items:center;
+    line-height: 80px;
 }
 
 #logodiv #img{
@@ -33,8 +31,6 @@ background-color: white;
     height: 100%;
 }
 #logodiv #img img{
-
-    margin-top: 4%;
     padding: 4px;
 }
 #logodiv ul{
@@ -42,7 +38,7 @@ background-color: white;
     padding: 0;
     margin: 0;
     overflow: hidden;
-    width: 100%;
+
 }
 
 .nav-items{
@@ -52,19 +48,54 @@ background-color: white;
 font-style: normal;
 font-weight: 600;
 font-size: 16px;
-line-height: 28px;
+line-height: 80px;
+margin: 0px 40px;
 text-align: center;
 letter-spacing: 0.2px;
 color: #252B42;
 
 }
 
-#logodiv #icon{
+@media only screen and (max-width: 768px) {
+    
+
+.checkbtn img{
+    display: block;
     position: absolute;
+    cursor: pointer;
     top: 40%;
-    right:4%
+    right: 40px;
+    line-height: 80px;
+    color: black;
 }
 
+#logodiv ul{
+    position: fixed;
+    height: 100vh;
+    background-color: black;
+    width: 100%;
+    top:80px;
+    right: -100%;
+transition: all 0.5s;
+    text-align: center;
+}
+#logodiv ul li{
+    display: block;
+    float: none;
+}
+#logodiv ul li a{
+    display: block;
+    color: white;
+}
+
+#check:checked ~ ul{
+    right: 0;
+    position: absolute;
+    top: 80px;
+    overflow-y: hidden;
+}
+
+}
 #introdiv{
  
     display: flex;
@@ -266,16 +297,11 @@ color: #5C5C5C;
 
 @media only screen and (min-width: 768px){
 
-#logodiv #icon{
-    display: none;
-}
+
 
 .nav-items{
     display: block;
-  max-height: 100%;
     float: right;
-    margin: 2% 2% 2% 2%;
-    max-height: 100%;
 }
 
 .nav-items a{
@@ -283,7 +309,9 @@ color: #5C5C5C;
     color: black;
    text-decoration: none;
 }
-
+.checkbtn{
+    display: none;
+}
 #introdiv{
     background-image: url('/images/Rectangle\ 48.png');
     background-repeat: no-repeat;
